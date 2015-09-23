@@ -3,17 +3,19 @@ var bio = {
     "age": 27,
     "role": "Web Developer",
     "contact": {
-        "mobile": " 1-559-797-1763",
+        "mobile": "1-559-797-1763",
         "email": "robstudent1988@gmail.com",
         "github": "robstudy",
         "twitter": "@robstudent1988",
         "location": "Clovis, CA"
     },
-    "welcomeMessage": "\"The secret of getting ahead is getting started\" - Mark Twain",
+    "welcomeMessage": "I enjoy programming and working with web technologies. I'm eager to learn and look forward to developing new skills and mastering those I've acquired.",
     "skills": [
         "HTML",
         "CSS",
         "Javascript",
+        "BootStrap",
+        "JQuery",
         "Java",
         "Objective-C"
     ],
@@ -29,13 +31,13 @@ var work = {
             "dates": "September 2012 - Present",
             "description": "Call center representitive specializing in enrollment and eligibility issues, billing inquiries, appeals, and claims support."
         },
-        {
+        /*{
             "employer": "Denny's",
             "title": "Server",
             "location": "710 W Shaw Ave, Clovis, CA 93612",
             "dates": "2010 - October 2012",
             "description": "Front staff server. Responsibilities included waiting tables, cashiering, busing, cleaning work station, and preparing to-go deliveries."
-        }
+        }*/
     ]
 }
 
@@ -63,7 +65,7 @@ var education = {
             "location": "1101 E University Ave, Fresno, CA 93741",
             "degree": "AS",
             "major": "Computer Information Systems",
-            "dates": "2014-2015"
+            "dates": "2014-2016"
         }
     ],
     "onlineCourses": [

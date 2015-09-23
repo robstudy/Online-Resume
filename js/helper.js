@@ -25,7 +25,7 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectDescription = '<p class="project-description"><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -57,12 +57,7 @@ function logClicks(x,y) {
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
-$(document).click(function(loc) {
-  console.log(loc.pageX, loc.pageY);
-});
-
 var map;    // declares a global map variable
-
 
 function initializeMap() {
 
@@ -72,9 +67,9 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  // This next line makes `map` a new Google Map JavaScript Object and attaches it to
-  // <div id="map">
+  // Create google map and infowindow
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+  var infowindow = new google.maps.InfoWindow({});
 
 
   /*
@@ -83,7 +78,6 @@ function initializeMap() {
   */
   function locationFinder() {
 
-    // initializes an empty array
     var locations = [];
 
     // adds the single location property from bio to the locations array
@@ -124,12 +118,9 @@ function initializeMap() {
       title: name
     });
 
-    // infoWindows are the little helper windows that open when you click
-    // or hover over a pin on a map. They usually contain more information
-    // about a location.
 
     google.maps.event.addListener(marker, 'click', function() {
-      infowindow = new google.maps.InfoWindow({content: name});
+      infowindow.setContent(name);
       infowindow.open(map, marker);
     });
 
@@ -170,7 +161,7 @@ function initializeMap() {
         query: locations[place]
       };
 
-      // Actually searches the Google Maps API for location data and runs the callback
+      // Searches the Google Maps API for location data and runs the callback
       // function with the search results after each search.
       service.textSearch(request, callback);
     }
