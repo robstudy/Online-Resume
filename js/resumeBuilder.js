@@ -3,10 +3,10 @@ var bio = {
     "age": 27,
     "role": "Web Developer",
     "contact": {
-        "mobile": "555-555-5555",
+        "mobile": " 1-559-797-1763",
         "email": "robstudent1988@gmail.com",
         "github": "robstudy",
-        "twitter": "@r0bertgarza",
+        "twitter": "@robstudent1988",
         "location": "Clovis, CA"
     },
     "welcomeMessage": "\"The secret of getting ahead is getting started\" - Mark Twain",
@@ -17,7 +17,7 @@ var bio = {
         "Java",
         "Objective-C"
     ],
-    "pic": "images/fry.jpg"
+    //"pic": "images/fry.jpg"
 }
 
 var work = {
@@ -44,8 +44,14 @@ var projects = {
         {
             "title": "Portfolio",
             "dates": 2015,
-            "description": "A Portfolio created with using the BootStrap framework",
-            "images": "images/tech.jpeg"
+            "description": "A portfolio created with using the BootStrap framework.",
+            "images": "images/PortImage.png"
+        },
+        {
+        	"title": "Arcade Game Clone",
+        	"dates": 2015,
+        	"description": "An arcade game based on the arcade game frogger.",
+        	"images": "images/gameImage.png"
         }
     ]
 }
@@ -80,8 +86,8 @@ bio.display = function(){
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedWelcome);
 
-	var formattedBioPic = HTMLbioPic.replace("%data%", bio.pic);
-	$("#header").append(formattedBioPic);
+	//var formattedBioPic = HTMLbioPic.replace("%data%", bio.pic);
+	//$("#header").append(formattedBioPic);
 	
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile); 
 	$("#topContacts").append(formattedMobile);
@@ -121,8 +127,8 @@ work.display = function() {
 }
 
 projects.display = function() {
+	$("#projects").append(HTMLprojectStart);
 	for(project in projects.listOfProjects) {
-		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.listOfProjects[project].title);
 		$(".project-entry").append(formattedTitle);
@@ -133,10 +139,8 @@ projects.display = function() {
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.listOfProjects[project].description);
 		$(".project-entry").append(formattedDescription);
 
-		if (projects.listOfProjects[project].images.length > 0) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.listOfProjects[project].images);
-				$(".project-entry").append(formattedImage);
-		}
+		var formattedImage = HTMLprojectImage.replace("%data%", projects.listOfProjects[project].images);
+		$(".project-entry").append(formattedImage);
 	}
 }
 
