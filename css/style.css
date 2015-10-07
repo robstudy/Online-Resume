@@ -230,7 +230,7 @@ span {
 }
 
 .project-description {
-  float: right;
+  margin: 0 auto;
   position: relative;
 }
 

@@ -54,6 +54,12 @@ var projects = {
         	"dates": 2015,
         	"description": "An arcade game based on the arcade game frogger.",
         	"images": "images/gameImage.png"
+        },
+        {
+        	"title": "Neighborhood Map Project",
+        	"dates": 2015,
+        	"description": "A google map with custom markers for local Japanese and Chinese restaurants.",
+        	"images": "images/GoogleMapProject.png"
         }
     ]
 }
