@@ -56,10 +56,22 @@ var projects = {
         	"images": "images/gameImage.png"
         },
         {
-        	"title": "Neighborhood Map Project",
+        	"title": "Neighborhood Map",
         	"dates": 2015,
         	"description": "A google map with custom markers for local Japanese and Chinese restaurants.",
         	"images": "images/GoogleMapProject.png"
+        },
+        {
+        	"title": "Website Obtimization",
+        	"dates": 2015,
+        	"description": "A pre-made website with slow loading and rendering optimized to obtain a page speed score higher than 90 and quick loading.",
+        	"images": "images/WebsiteOptimization.png"
+        },
+        {
+        	"title": "Udacity Feed Reader Test",
+        	"dates": 2015,
+        	"description": "This project focuses on running a series of page tests using Jasmine.js on a Udacity RSS feed reader.",
+        	"images": "images/FeedReader.png"
         }
     ]
 };
