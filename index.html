@@ -22,7 +22,7 @@
       <div id="workExperience" class='work-click gray'>
         <h2 class="blue-text">Work Experience</h2>
       </div>
-      <div id="projects">
+      <div id="projects" class="project-click">
         <h2 class="blue-text">Projects</h2>
       </div>
       <div id="education" class='gray'>
@@ -52,16 +52,20 @@
       document.getElementById('workExperience').style.display = 'none';
     }*/
     $('.work-entry').hide();
-    if(document.getElementsByClassName('project-entry').length === 0) {
+    /*if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
+    }*/
+    $('.project-entry').hide();
+    /*if(document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.display = 'none';
-    }
+    }*/
+    $('.education-entry').hide();
+    $('.online-entry').hide();
+    $('.onlineClick').hide();
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('letsConnect').style.display = 'none';
     }
-    if(document.getElementById('map') === null) {
+    if(!$('#map')) {
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
