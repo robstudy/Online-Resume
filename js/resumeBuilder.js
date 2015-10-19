@@ -19,7 +19,7 @@ var bio = {
         "Java",
         "Objective-C"
     ],
-    //"pic": "images/fry.jpg"
+    //"pic": ""
 };
 
 var work = {

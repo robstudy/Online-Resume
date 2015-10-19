@@ -6,6 +6,9 @@
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script src="js/pageAnimate.js"></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <meta name="viewport" content="width=device-width">
   </script>
@@ -16,7 +19,7 @@
       <ul id="topContacts" class='flex-box'></ul>
     </div>
     <div style='clear: both;'></div>
-      <div id="workExperience" class='gray'>
+      <div id="workExperience" class='work-click gray'>
         <h2 class="blue-text">Work Experience</h2>
       </div>
       <div id="projects">
@@ -45,9 +48,10 @@
     if(document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.display = 'none';
     }
-    if(document.getElementsByClassName('work-entry').length === 0) {
+    /*if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
-    }
+    }*/
+    $('.work-entry').hide();
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }
