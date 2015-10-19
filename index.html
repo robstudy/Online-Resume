@@ -1,73 +1,70 @@
 <!DOCTYPE html>
+
 <head>
-  <meta charset="utf-8">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
-  <script src="js/pageAnimate.js"></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-  <meta name="viewport" content="width=device-width">
-  </script>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+    <script src="js/pageAnimate.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width">
+    </script>
 </head>
+
 <body unresolved>
-  <div id="main">
-    <div id="header" class="center-content clearfix">
-      <ul id="topContacts" class='flex-box'></ul>
-    </div>
-    <div style='clear: both;'></div>
-      <div id="workExperience" class='work-click gray'>
-        <h2 class="blue-text">Work Experience</h2>
-      </div>
-      <div id="projects" class="project-click">
-        <h2 class="blue-text">Projects</h2>
-      </div>
-      <div id="education" class='gray'>
-        <h2 class="blue-text">Education</h2>
-      </div>
-      <div id="mapDiv">
-        <h2 class="blue-text">Where I've Lived and Worked</h2>
-      </div>
+    <div id="main">
+        <div id="header" class="center-content clearfix">
+            <ul id="topContacts" class='flex-box'></ul>
+        </div>
+        <div style='clear: both;'></div>
+        <div id="workExperience" class='gray'>
+            <h2 class="workClick blue-text"><a href="#">Work Experience</a></h2>
+        </div>
+        <div id="projects">
+            <h2 class="projectClick blue-text"><a href="#">Projects<a></h2>
+        </div>
+        <div id="education" class='gray'>
+            <h2 class="eduClick blue-text"><a href="#">Education</a></h2>
+        </div>
+        <div id="mapDiv">
+            <h2 class="blue-text">Where I've Lived and Worked</h2>
+        </div>
     </div>
     <div id="letsConnect" class='dark-gray'>
-      <h2 class='blue center-text white-text'>Let's Connect</h2>
+        <h2 class='blue center-text white-text'>Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
-      </ul>
+        </ul>
     </div>
-  </div>
+    </div>
 
-  <script src="js/resumeBuilder.js"></script>
-  <script type="text/javascript">
-
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    /*if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }*/
-    $('.work-entry').hide();
-    /*if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }*/
-    $('.project-entry').hide();
-    /*if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }*/
-    $('.education-entry').hide();
-    $('.online-entry').hide();
-    $('.onlineClick').hide();
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('letsConnect').style.display = 'none';
-    }
-    if(!$('#map')) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
+    <script src="js/resumeBuilder.js"></script>
+    <script type="text/javascript">
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('letsConnect').style.display = 'none';
+        }
+        if (!$('#map')) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>

@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
-	var workClicked = false, projectClicked = false, eduClick = false;
-	$('.work-click').click(function(){
+	var workClicked = true, projectClicked = true, eduClick = true;
+
+	$('.workClick').click(function(){
 		if (workClicked === false) {
 			$('.work-entry').velocity('fadeIn', {duration: 500});
 			workClicked = true;
@@ -12,9 +13,9 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.project-click').click(function(){
+	$('.projectClick').click(function(){
 		if (projectClicked === false) {
-			$('.project-entry').velocity('fadeIn', {duration: 500});
+			$('.project-entry').velocity('fadeIn',  {duration: 500});
 			projectClicked = true;
 		}
 		else {
@@ -23,7 +24,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$('#education').click(function(){
+	$('.eduClick').click(function(){
 		if (eduClick === false) {
 			$('.education-entry').velocity('fadeIn', {duration: 500});
 			$('.online-entry').velocity('fadeIn', {duration: 500});
